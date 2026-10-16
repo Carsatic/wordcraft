@@ -5,6 +5,7 @@ pub mod canvas;
 pub mod caret;
 pub mod chart;
 pub mod citations;
+pub mod code;
 pub mod column;
 pub mod connectors;
 pub mod controls;
@@ -16,6 +17,7 @@ pub mod fields;
 pub mod file;
 pub mod find_pattern;
 pub mod fmt_revisions;
+pub mod gdscript;
 pub mod font;
 pub mod format;
 pub mod index;
@@ -100,6 +102,7 @@ pub fn registry() -> Registry {
     v.extend(protect::specs());
     v.extend(speech::specs());
     v.extend(controls::specs());
+    v.extend(code::specs());
     Registry::new(v)
 }
 
